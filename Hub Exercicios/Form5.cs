@@ -10,32 +10,27 @@ using System.Windows.Forms;
 
 namespace Hub_Exercicios
 {
-    public partial class Form2 : Form
+    public partial class Form5 : Form
     {
-        public Form2()
+        public Form5()
         {
             InitializeComponent();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
-        }
+        private void Form5_Load(object sender, EventArgs e)
+        { }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         { }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void textBox1_MouseHover(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
-                textBox1.Text = "Bem vindo ao C#!";
-            else 
-                textBox1.Text = "Não Aceitou";
+            textBox1.Text = "Passou-me com o mouse por cima";
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void textBox1_MouseLeave(object sender, EventArgs e)
         {
-
+            textBox1.Text = "";
         }
     }
 }
