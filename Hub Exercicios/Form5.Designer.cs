@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             textBox1 = new TextBox();
+            button1 = new Button();
             SuspendLayout();
             // 
             // textBox1
@@ -41,11 +42,22 @@
             textBox1.MouseLeave += textBox1_MouseLeave;
             textBox1.MouseHover += textBox1_MouseHover;
             // 
+            // button1
+            // 
+            button1.Location = new Point(301, 297);
+            button1.Name = "button1";
+            button1.Size = new Size(43, 24);
+            button1.TabIndex = 1;
+            button1.Text = "Back";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Form5
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(347, 324);
+            Controls.Add(button1);
             Controls.Add(textBox1);
             Name = "Form5";
             Text = "Ex4";
@@ -57,5 +69,6 @@
         #endregion
 
         private TextBox textBox1;
+        private Button button1;
     }
 }

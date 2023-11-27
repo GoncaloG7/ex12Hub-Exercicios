@@ -39,6 +39,13 @@ namespace Hub_Exercicios
             {
                 textBox1.Text = "Tem que escolher uma das opções";
             }
-        }        
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form1 frm_1 = new Form1();
+            frm_1.Show();
+            this.Close();
+        }
     }
 }

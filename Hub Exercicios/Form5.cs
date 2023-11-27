@@ -32,5 +32,12 @@ namespace Hub_Exercicios
         {
             textBox1.Text = "";
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 frm_1 = new Form1();
+            frm_1.Show();
+            this.Close();
+        }
     }
 }

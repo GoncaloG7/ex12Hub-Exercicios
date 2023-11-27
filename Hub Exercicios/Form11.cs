@@ -7,33 +7,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 
 namespace Hub_Exercicios
 {
-    public partial class Form2 : Form
+    public partial class Form11 : Form
     {
-        public Form2()
+        public Form11()
         {
             InitializeComponent();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        { }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        { }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
-                textBox1.Text = "Bem vindo ao C#!";
+            string password = (Interaction.InputBox("", "InputBox", "enter password"));
+            if (password == "coisas012")
+            {
+                MessageBox.Show("Bem vindo");
+            }
             else
-                textBox1.Text = "Não Aceitou";
+            {
+                MessageBox.Show("Password incorreta");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

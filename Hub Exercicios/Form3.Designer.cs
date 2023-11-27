@@ -33,6 +33,7 @@
             radioButton2 = new RadioButton();
             groupBox1 = new GroupBox();
             textBox1 = new TextBox();
+            button2 = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -89,11 +90,22 @@
             textBox1.TabIndex = 4;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
+            // button2
+            // 
+            button2.Location = new Point(351, 188);
+            button2.Name = "button2";
+            button2.Size = new Size(41, 25);
+            button2.TabIndex = 5;
+            button2.Text = "Back";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(394, 215);
+            Controls.Add(button2);
             Controls.Add(textBox1);
             Controls.Add(groupBox1);
             Controls.Add(button1);
@@ -112,5 +124,6 @@
         private RadioButton radioButton2;
         private GroupBox groupBox1;
         private TextBox textBox1;
+        private Button button2;
     }
 }

@@ -45,8 +45,15 @@ namespace Hub_Exercicios
 
         private void button5_Click(object sender, EventArgs e)
         {
-             BackColor = default(Color);
-             textBox1.ForeColor = default(Color);
+            BackColor = default(Color);
+            textBox1.ForeColor = default(Color);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form1 frm_1 = new Form1();
+            frm_1.Show();
+            this.Close();
         }
     }
 }
