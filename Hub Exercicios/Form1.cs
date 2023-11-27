@@ -13,7 +13,7 @@ namespace Hub_Exercicios
         private void button1_Click(object sender, EventArgs e)
         {
             switch (comboBox1.SelectedIndex)
-            {
+            { 
                 case 0:
                     Form2 frm_2 = new Form2();
                     frm_2.Show();
