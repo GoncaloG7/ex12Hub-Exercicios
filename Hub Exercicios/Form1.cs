@@ -1,3 +1,7 @@
+using System.Diagnostics.Eventing.Reader;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
+
 namespace Hub_Exercicios
 {
     public partial class Form1 : Form
@@ -13,7 +17,7 @@ namespace Hub_Exercicios
         private void button1_Click(object sender, EventArgs e)
         {
             switch (comboBox1.SelectedIndex)
-            { 
+            {
                 case 0:
                     Form2 frm_2 = new Form2();
                     frm_2.Show();
@@ -74,11 +78,32 @@ namespace Hub_Exercicios
                     frm_12.Show();
                     this.Hide();
                     break;
-                
-                /*Form1 frm_1 = new Form1();
-                frm_1.Show();
-                this.Close();*/
+                default:
+                    MessageBox.Show("Escolha uma opção");
+                    break;
             }
-        }        
+        }
+
+                /*Form1 frm_1 = new Form1();
+                  frm_1.Show();
+                  this.Close();*/
+
+        public void button2_Click(object sender, EventArgs e)
+        {
+            /*Application.OpenForms: Isso pega todos os formulários que estão 
+                                     atualmente abertos na aplicação.
+              Cast<Form>(): Isso converte os itens na lista para o tipo Form 
+                            (pois OpenForms retorna uma coleção de Form).
+              ToList(): converte a coleção resultante em uma lista.
+              foreach: é usado para executar o código dentro dele para cada 
+                       formulário na lista de formulários abertos 
+              frm.Close(): Isso fecha cada formulário na lista.*/
+
+            var fecharform = Application.OpenForms.Cast<Form>().ToList();
+            foreach (Form frm in fecharform)
+            {
+                frm.Close();
+            }
+        }
     }
 }

@@ -31,6 +31,7 @@
             comboBox1 = new ComboBox();
             button1 = new Button();
             label1 = new Label();
+            button2 = new Button();
             SuspendLayout();
             // 
             // comboBox1
@@ -61,12 +62,23 @@
             label1.TabIndex = 12;
             label1.Text = "Ex das aulas";
             // 
+            // button2
+            // 
+            button2.Location = new Point(298, 112);
+            button2.Name = "button2";
+            button2.Size = new Size(52, 24);
+            button2.TabIndex = 13;
+            button2.Text = "Fechar";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
             ClientSize = new Size(352, 138);
+            Controls.Add(button2);
             Controls.Add(label1);
             Controls.Add(comboBox1);
             Controls.Add(button1);
@@ -82,5 +94,6 @@
         private ComboBox comboBox1;
         private Button button1;
         private Label label1;
+        private Button button2;
     }
 }
