@@ -33,7 +33,7 @@
             radioButton2 = new RadioButton();
             groupBox1 = new GroupBox();
             textBox1 = new TextBox();
-            button2 = new Button();
+            comboBox1 = new ComboBox();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -90,22 +90,23 @@
             textBox1.TabIndex = 4;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
-            // button2
+            // comboBox1
             // 
-            button2.Location = new Point(351, 188);
-            button2.Name = "button2";
-            button2.Size = new Size(41, 25);
-            button2.TabIndex = 5;
-            button2.Text = "Back";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            comboBox1.BackColor = SystemColors.ButtonHighlight;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Back", "Close" });
+            comboBox1.Location = new Point(351, 191);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(41, 23);
+            comboBox1.TabIndex = 5;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(394, 215);
-            Controls.Add(button2);
+            Controls.Add(comboBox1);
             Controls.Add(textBox1);
             Controls.Add(groupBox1);
             Controls.Add(button1);
@@ -124,6 +125,6 @@
         private RadioButton radioButton2;
         private GroupBox groupBox1;
         private TextBox textBox1;
-        private Button button2;
+        private ComboBox comboBox1;
     }
 }

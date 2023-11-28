@@ -14,7 +14,7 @@ namespace Hub_Exercicios
         private void Form1_Load(object sender, EventArgs e)
         { }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (comboBox1.SelectedIndex)
             {
@@ -84,9 +84,9 @@ namespace Hub_Exercicios
             }
         }
 
-                /*Form1 frm_1 = new Form1();
-                  frm_1.Show();
-                  this.Close();*/
+        /*Form1 frm_1 = new Form1();
+          frm_1.Show();
+          this.Close();*/
 
         public void button2_Click(object sender, EventArgs e)
         {

@@ -32,6 +32,7 @@
             formatarToolStripMenuItem = new ToolStripMenuItem();
             corETipoDeLetraToolStripMenuItem = new ToolStripMenuItem();
             label1 = new Label();
+            comboBox1 = new ComboBox();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -50,11 +51,12 @@
             formatarToolStripMenuItem.Name = "formatarToolStripMenuItem";
             formatarToolStripMenuItem.Size = new Size(67, 20);
             formatarToolStripMenuItem.Text = "Formatar";
+            formatarToolStripMenuItem.Click += formatarToolStripMenuItem_Click;
             // 
             // corETipoDeLetraToolStripMenuItem
             // 
             corETipoDeLetraToolStripMenuItem.Name = "corETipoDeLetraToolStripMenuItem";
-            corETipoDeLetraToolStripMenuItem.Size = new Size(180, 22);
+            corETipoDeLetraToolStripMenuItem.Size = new Size(168, 22);
             corETipoDeLetraToolStripMenuItem.Text = "Cor e tipo de letra";
             corETipoDeLetraToolStripMenuItem.Click += corETipoDeLetraToolStripMenuItem_Click;
             // 
@@ -67,11 +69,23 @@
             label1.TabIndex = 1;
             label1.Text = "POO em C#";
             // 
+            // comboBox1
+            // 
+            comboBox1.BackColor = SystemColors.ButtonHighlight;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Back", "Close" });
+            comboBox1.Location = new Point(288, 213);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(41, 23);
+            comboBox1.TabIndex = 5;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
             // Form12
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(329, 236);
+            Controls.Add(comboBox1);
             Controls.Add(label1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
@@ -89,5 +103,6 @@
         private ToolStripMenuItem formatarToolStripMenuItem;
         private ToolStripMenuItem corETipoDeLetraToolStripMenuItem;
         private Label label1;
+        private ComboBox comboBox1;
     }
 }

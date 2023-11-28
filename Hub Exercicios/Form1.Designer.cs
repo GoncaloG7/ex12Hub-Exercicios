@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             comboBox1 = new ComboBox();
-            button1 = new Button();
             label1 = new Label();
             button2 = new Button();
             SuspendLayout();
@@ -38,25 +37,16 @@
             // 
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Ex1", "Ex2", "Ex3", "Ex4", "Ex5", "Ex5.1", "Ex6", "Ex7", "Ex8", "Ex9", "Ex10", "Ex11" });
-            comboBox1.Location = new Point(41, 58);
+            comboBox1.Location = new Point(41, 53);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(131, 23);
             comboBox1.TabIndex = 11;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(216, 53);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 31);
-            button1.TabIndex = 0;
-            button1.Text = "Abrir";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(41, 40);
+            label1.Location = new Point(41, 35);
             label1.Name = "label1";
             label1.Size = new Size(70, 15);
             label1.TabIndex = 12;
@@ -64,11 +54,11 @@
             // 
             // button2
             // 
-            button2.Location = new Point(298, 112);
+            button2.Location = new Point(214, 121);
             button2.Name = "button2";
-            button2.Size = new Size(52, 24);
+            button2.Size = new Size(45, 24);
             button2.TabIndex = 13;
-            button2.Text = "Fechar";
+            button2.Text = "Close";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
@@ -77,11 +67,10 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
-            ClientSize = new Size(352, 138);
+            ClientSize = new Size(261, 147);
             Controls.Add(button2);
             Controls.Add(label1);
             Controls.Add(comboBox1);
-            Controls.Add(button1);
             ForeColor = SystemColors.ControlText;
             Name = "Form1";
             Text = "Hub";
@@ -92,7 +81,6 @@
 
         #endregion
         private ComboBox comboBox1;
-        private Button button1;
         private Label label1;
         private Button button2;
     }

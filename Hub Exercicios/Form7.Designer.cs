@@ -38,7 +38,7 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            button2 = new Button();
+            comboBox1 = new ComboBox();
             SuspendLayout();
             // 
             // label4
@@ -127,22 +127,23 @@
             label1.TabIndex = 20;
             label1.Text = "área, perimetro e volume de um retângulo";
             // 
-            // button2
+            // comboBox1
             // 
-            button2.Location = new Point(374, 305);
-            button2.Name = "button2";
-            button2.Size = new Size(44, 22);
-            button2.TabIndex = 30;
-            button2.Text = "Back";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            comboBox1.BackColor = SystemColors.ButtonHighlight;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Back", "Close" });
+            comboBox1.Location = new Point(378, 305);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(41, 23);
+            comboBox1.TabIndex = 30;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // Form7
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(421, 330);
-            Controls.Add(button2);
+            Controls.Add(comboBox1);
             Controls.Add(label4);
             Controls.Add(textBox3);
             Controls.Add(limpar);
@@ -171,6 +172,6 @@
         private Label label3;
         private Label label2;
         private Label label1;
-        private Button button2;
+        private ComboBox comboBox1;
     }
 }

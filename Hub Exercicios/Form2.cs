@@ -36,11 +36,23 @@ namespace Hub_Exercicios
                 textBox1.Text = "Não Aceitou";
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Form1 frm_1 = new Form1();
-            frm_1.Show();
-            this.Close();
+            switch (comboBox1.SelectedIndex)
+            {
+                case 0:
+                    Form1 frm_1 = new Form1();
+                    frm_1.Show();
+                    this.Close();
+                    break;
+                case 1:
+                    var fecharform = Application.OpenForms.Cast<Form>().ToList();
+                    foreach (Form frm in fecharform)
+                    {
+                        frm.Close();
+                    }
+                    break;
+            }
         }
     }
 }

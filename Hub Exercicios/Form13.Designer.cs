@@ -37,7 +37,7 @@
             textBox3 = new TextBox();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
-            button1 = new Button();
+            comboBox1 = new ComboBox();
             SuspendLayout();
             // 
             // label3
@@ -118,22 +118,23 @@
             textBox1.Size = new Size(173, 23);
             textBox1.TabIndex = 9;
             // 
-            // button1
+            // comboBox1
             // 
-            button1.Location = new Point(338, 191);
-            button1.Name = "button1";
-            button1.Size = new Size(42, 25);
-            button1.TabIndex = 18;
-            button1.Text = "Back";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            comboBox1.BackColor = SystemColors.ButtonHighlight;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Back", "Close" });
+            comboBox1.Location = new Point(338, 192);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(41, 23);
+            comboBox1.TabIndex = 18;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // Form13
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(381, 217);
-            Controls.Add(button1);
+            Controls.Add(comboBox1);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -161,6 +162,6 @@
         private TextBox textBox3;
         private TextBox textBox2;
         private TextBox textBox1;
-        private Button button1;
+        private ComboBox comboBox1;
     }
 }

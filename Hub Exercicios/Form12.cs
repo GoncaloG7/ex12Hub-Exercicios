@@ -17,6 +17,9 @@ namespace Hub_Exercicios
             InitializeComponent();
         }
 
+        private void formatarToolStripMenuItem_Click(object sender, EventArgs e)
+        { }
+
         private void corETipoDeLetraToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ColorDialog cor = new ColorDialog();
@@ -28,6 +31,25 @@ namespace Hub_Exercicios
             if (letra.ShowDialog() == DialogResult.OK)
             {
                 label1.Font = letra.Font;
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (comboBox1.SelectedIndex)
+            {
+                case 0:
+                    Form1 frm_1 = new Form1();
+                    frm_1.Show();
+                    this.Close();
+                    break;
+                case 1:
+                    var fecharform = Application.OpenForms.Cast<Form>().ToList();
+                    foreach (Form frm in fecharform)
+                    {
+                        frm.Close();
+                    }
+                    break;
             }
         }
     }
