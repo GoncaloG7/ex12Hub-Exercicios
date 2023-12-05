@@ -1,6 +1,7 @@
 using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
+using Hub_Exercicios.Class;
 
 namespace Hub_Exercicios
 {
@@ -18,92 +19,87 @@ namespace Hub_Exercicios
         {
             switch (comboBox1.SelectedIndex)
             {
-                case 0:
+                case 0: //1
                     Form2 frm_2 = new Form2();
                     frm_2.Show();
                     this.Hide();
                     break;
-                case 1:
+                case 1: //2
                     Form3 frm_3 = new Form3();
                     frm_3.Show();
                     this.Hide();
                     break;
-                case 2:
+                case 2: //3
                     Form4 frm_4 = new Form4();
                     frm_4.Show();
                     this.Hide();
                     break;
-                case 3:
+                case 3: //4
                     Form5 frm_5 = new Form5();
                     frm_5.Show();
                     this.Hide();
                     break;
-                case 4:
+                case 4: //5
                     Form6 frm_6 = new Form6();
                     frm_6.Show();
                     this.Hide();
                     break;
-                case 5:
-                    Form13 frm_13 = new Form13();
+                case 5: //5.1
+                    zForm13 frm_13 = new zForm13();
                     frm_13.Show();
                     this.Hide();
                     break;
-                case 6:
+                case 6: //6
                     Form7 frm_7 = new Form7();
                     frm_7.Show();
                     this.Hide();
                     break;
-                case 7:
+                case 7: //7
                     Form8 frm_8 = new Form8();
                     frm_8.Show();
                     this.Hide();
                     break;
-                case 8:
+                case 8: //8
                     Form9 frm_9 = new Form9();
                     frm_9.Show();
                     this.Hide();
                     break;
-                case 9:
-                    Form10 frm_10 = new Form10();
+                case 9: //9
+                    zForm10 frm_10 = new zForm10();
                     frm_10.Show();
                     this.Hide();
                     break;
-                case 10:
-                    Form11 frm_11 = new Form11();
+                case 10: //10
+                    zForm11 frm_11 = new zForm11();
                     frm_11.Show();
                     this.Hide();
                     break;
-                case 11:
-                    Form12 frm_12 = new Form12();
+                case 11: //11
+                    zForm12 frm_12 = new zForm12();
                     frm_12.Show();
                     this.Hide();
                     break;
-                default:
-                    MessageBox.Show("Escolha uma opção");
+                case 12: //12
+                    zForm14 frm_14 = new zForm14();
+                    frm_14.Show();
+                    this.Hide();
+                    break;
+                case 13: //13
+                    zForm15 frm_15 = new zForm15();
+                    frm_15.Show();
+                    this.Hide();
+                    break;
+                case 14: //14
+                    zForm16 frm_16 = new zForm16();
+                    frm_16.Show();
+                    this.Hide();
                     break;
             }
         }
 
-        /*Form1 frm_1 = new Form1();
-          frm_1.Show();
-          this.Close();*/
-
         public void button2_Click(object sender, EventArgs e)
         {
-            /*Application.OpenForms: Isso pega todos os formulários que estão 
-                                     atualmente abertos na aplicação.
-              Cast<Form>(): Isso converte os itens na lista para o tipo Form 
-                            (pois OpenForms retorna uma coleção de Form).
-              ToList(): converte a coleção resultante em uma lista.
-              foreach: é usado para executar o código dentro dele para cada 
-                       formulário na lista de formulários abertos 
-              frm.Close(): Isso fecha cada formulário na lista.*/
-
-            var fecharform = Application.OpenForms.Cast<Form>().ToList();
-            foreach (Form frm in fecharform)
-            {
-                frm.Close();
-            }
+            ClassClose.CloseAllForms();
         }
     }
 }

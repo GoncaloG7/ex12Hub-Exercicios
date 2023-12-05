@@ -1,6 +1,6 @@
 ﻿namespace Hub_Exercicios
 {
-    partial class Form11
+    partial class zForm11
     {
         /// <summary>
         /// Required designer variable.

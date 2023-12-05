@@ -8,6 +8,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Hub_Exercicios.Class;
 
 namespace Hub_Exercicios
 {
@@ -54,16 +55,10 @@ namespace Hub_Exercicios
             switch (comboBox1.SelectedIndex)
             {
                 case 0:
-                    Form1 frm_1 = new Form1();
-                    frm_1.Show();
-                    this.Close();
+                    ClassClose.Backbtn(this);
                     break;
                 case 1:
-                    var fecharform = Application.OpenForms.Cast<Form>().ToList();
-                    foreach (Form frm in fecharform)
-                    {
-                        frm.Close();
-                    }
+                    ClassClose.CloseAllForms();
                     break;
             }
         }

@@ -7,19 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Hub_Exercicios.Class;
 
 namespace Hub_Exercicios
 {
-    public partial class Form10 : Form
+    public partial class zForm15 : Form
     {
-        public Form10()
+        public zForm15()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Bem vindo ao C#");
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -27,16 +23,10 @@ namespace Hub_Exercicios
             switch (comboBox1.SelectedIndex)
             {
                 case 0:
-                    Form1 frm_1 = new Form1();
-                    frm_1.Show();
-                    this.Close();
+                    ClassClose.Backbtn(this);
                     break;
                 case 1:
-                    var fecharform = Application.OpenForms.Cast<Form>().ToList();
-                    foreach (Form frm in fecharform)
-                    {
-                        frm.Close();
-                    }
+                    ClassClose.CloseAllForms();
                     break;
             }
         }

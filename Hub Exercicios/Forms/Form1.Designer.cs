@@ -36,7 +36,7 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Ex1", "Ex2", "Ex3", "Ex4", "Ex5", "Ex5.1", "Ex6", "Ex7", "Ex8", "Ex9", "Ex10", "Ex11" });
+            comboBox1.Items.AddRange(new object[] { "Ex1", "Ex2", "Ex3", "Ex4", "Ex5", "Ex5.1", "Ex6", "Ex7", "Ex8", "Ex9", "Ex10", "Ex11", "Ex12", "Ex13", "Ex14" });
             comboBox1.Location = new Point(41, 53);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(131, 23);

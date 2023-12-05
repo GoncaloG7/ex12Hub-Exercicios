@@ -7,13 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Hub_Exercicios.Class;
 using Microsoft.VisualBasic;
 
 namespace Hub_Exercicios
 {
-    public partial class Form11 : Form
+    public partial class zForm11 : Form
     {
-        public Form11()
+        public zForm11()
         {
             InitializeComponent();
         }
@@ -21,14 +22,10 @@ namespace Hub_Exercicios
         private void button1_Click(object sender, EventArgs e)
         {
             string password = (Interaction.InputBox("", "InputBox", "enter password"));
-            if (password == "coisas012")
-            {
+            if (password == "coisas7")
                 MessageBox.Show("Bem vindo");
-            }
             else
-            {
                 MessageBox.Show("Password incorreta");
-            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -36,16 +33,10 @@ namespace Hub_Exercicios
             switch (comboBox1.SelectedIndex)
             {
                 case 0:
-                    Form1 frm_1 = new Form1();
-                    frm_1.Show();
-                    this.Close();
+                    ClassClose.Backbtn(this);
                     break;
                 case 1:
-                    var fecharform = Application.OpenForms.Cast<Form>().ToList();
-                    foreach (Form frm in fecharform)
-                    {
-                        frm.Close();
-                    }
+                    ClassClose.CloseAllForms();
                     break;
             }
         }

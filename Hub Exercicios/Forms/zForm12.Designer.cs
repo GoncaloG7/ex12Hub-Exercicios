@@ -1,6 +1,6 @@
 ﻿namespace Hub_Exercicios
 {
-    partial class Form12
+    partial class zForm12
     {
         /// <summary>
         /// Required designer variable.
@@ -63,6 +63,7 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Lime;
             label1.Location = new Point(39, 84);
             label1.Name = "label1";
             label1.Size = new Size(70, 15);

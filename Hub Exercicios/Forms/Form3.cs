@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Hub_Exercicios.Class;
 
 namespace Hub_Exercicios
 {
@@ -28,17 +29,11 @@ namespace Hub_Exercicios
         private void button1_Click(object sender, EventArgs e)
         {
             if (radioButton1.Checked)
-            {
                 textBox1.Text = "Bem Vindo ao C#";
-            }
             else if (radioButton2.Checked)
-            {
                 textBox1.Text = "Tem que aceitar";
-            }
             else
-            {
                 textBox1.Text = "Tem que escolher uma das opções";
-            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -46,16 +41,10 @@ namespace Hub_Exercicios
             switch (comboBox1.SelectedIndex)
             {
                 case 0:
-                    Form1 frm_1 = new Form1();
-                    frm_1.Show();
-                    this.Close();
+                    ClassClose.Backbtn(this);
                     break;
                 case 1:
-                    var fecharform = Application.OpenForms.Cast<Form>().ToList();
-                    foreach (Form frm in fecharform)
-                    {
-                        frm.Close();
-                    }
+                    ClassClose.CloseAllForms();
                     break;
             }
         }

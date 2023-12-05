@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Hub_Exercicios.Class;
 using Microsoft.VisualBasic;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -28,37 +29,24 @@ namespace Hub_Exercicios
             int resultado = 0;
             switch (comboBox1.SelectedIndex)
             {
-                case 0:
-                    resultado = n1 + n2;
-                    break;
-                case 1:
-                    resultado = n1 - n2;
-                    break;
-                case 2:
-                    resultado = n1 * n2;
-                    break;
-                case 3:
-                    resultado = n1 / n2;
-                    break;
+                case 0: resultado = n1 + n2; break;
+                case 1: resultado = n1 - n2; break;
+                case 2: resultado = n1 * n2; break;
+                case 3: resultado = n1 / n2; break;
+                default: resultado = 0; break;
             }
-            textBox1.Text = "Resultado: " + resultado;
+                textBox1.Text = "Resultado: " + resultado;
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (comboBox1.SelectedIndex)
+            switch (comboBox2.SelectedIndex)
             {
                 case 0:
-                    Form1 frm_1 = new Form1();
-                    frm_1.Show();
-                    this.Close();
+                    ClassClose.Backbtn(this);
                     break;
                 case 1:
-                    var fecharform = Application.OpenForms.Cast<Form>().ToList();
-                    foreach (Form frm in fecharform)
-                    {
-                        frm.Close();
-                    }
+                    ClassClose.CloseAllForms();
                     break;
             }
         }

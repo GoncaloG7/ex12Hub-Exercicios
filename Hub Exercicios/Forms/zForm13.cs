@@ -7,17 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Hub_Exercicios.Class;
 using static System.Net.Mime.MediaTypeNames;
 namespace Hub_Exercicios
 {
-    public partial class Form13 : Form
+    public partial class zForm13 : Form
     {
         private string enter;
         public string nome;
         public string nome2;
         public string Idade;
 
-        public Form13()
+        public zForm13()
         {
             InitializeComponent();
         }
@@ -55,16 +56,10 @@ namespace Hub_Exercicios
             switch (comboBox1.SelectedIndex)
             {
                 case 0:
-                    Form1 frm_1 = new Form1();
-                    frm_1.Show();
-                    this.Close();
+                    ClassClose.Backbtn(this);
                     break;
                 case 1:
-                    var fecharform = System.Windows.Forms.Application.OpenForms.Cast<Form>().ToList();
-                    foreach (Form frm in fecharform)
-                    {
-                        frm.Close();
-                    }
+                    ClassClose.CloseAllForms();
                     break;
             }
         }

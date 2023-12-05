@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Hub_Exercicios.Class;
 using Microsoft.VisualBasic;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -25,7 +26,7 @@ namespace Hub_Exercicios
         {
             textBox1.Text = " ";
             textBox2.Text = " ";
-            int n1 = Convert.ToInt32(Interaction.InputBox("Insira 1º valor", "Input Box"));
+            int n1 = Convert.ToInt32(Interaction.InputBox("Insira 1º valor", "Input Box", "escreve aqui"));
             int n2 = Convert.ToInt32(Interaction.InputBox("Insira 2º valor", "Input Box"));
 
             int resultado = 0;
@@ -46,16 +47,10 @@ namespace Hub_Exercicios
             switch (comboBox1.SelectedIndex)
             {
                 case 0:
-                    Form1 frm_1 = new Form1();
-                    frm_1.Show();
-                    this.Close();
+                    ClassClose.Backbtn(this);
                     break;
                 case 1:
-                    var fecharform = Application.OpenForms.Cast<Form>().ToList();
-                    foreach (Form frm in fecharform)
-                    {
-                        frm.Close();
-                    }
+                    ClassClose.CloseAllForms();
                     break;
             }
         }
